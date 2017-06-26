@@ -1,0 +1,36 @@
+.App {
+  background-color: green;
+}
+
+.ProjectContainer {
+  display: flex;
+  justify-content: space-around;
+
+}
+
+.ProjectItem {
+  flex-basis: 25%;
+  padding: 30px;
+}
+
+.nav {
+  display: flex;
+}
+
+.active {
+  font-weight: bold;
+}
+
+
+.nav li {
+  margin-right: 15px;
+}
+.home {
+  background-color: yellow;
+  margin: auto auto;
+  display: flex;
+}
+
+.about {
+  background-color: orange;
+}
