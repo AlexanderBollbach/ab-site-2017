@@ -15,6 +15,18 @@ app.use(function(req, res, next) {
 
 var DB;
 
+// Serve static assets
+app.use(express.static(path.resolve(__dirname, '../frontend/', 'build')));
+
+// Always return the main index.html, so react-router render the route in the client
+app.get('*', (req, res) => {
+  res.sendFile(path.resolve(__dirname, '..', 'build', 'index.html'));
+});
+
+
+
+
+
 
 // Retrieve
 var MongoClient = require('mongodb').MongoClient;
@@ -31,16 +43,18 @@ MongoClient.connect(`mongodb://${mongoUser}:${mongopassword}@ds135669.mlab.com:3
 app.get('/', (req, res) => {
 
 
-res.setHeader('Content-Type', 'application/json');
- var collection = DB.collection('projects');
-
-  collection.find().toArray(function(err, items) {
 
 
-res.send(items);
-
-  });
-
+// res.setHeader('Content-Type', 'application/json');
+//  var collection = DB.collection('projects');
+//
+//   collection.find().toArray(function(err, items) {
+//
+//
+// res.send(items);
+//
+//   });
+//
 
 
 })
