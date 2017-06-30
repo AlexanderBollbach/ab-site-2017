@@ -1,31 +1,32 @@
 import './style.css'
 import React from 'react'
 // const API = require('../utils/api')
-const axios = require('axios');
-
+const axios = require( 'axios' );
 
 class Projects extends React.Component {
 
-  constructor(props) {
-    super(props);
+  constructor( props ) {
+    super( props );
 
     this.state = {
-      projects: []
+      projects: [ ]
     };
   }
 
-  componentDidMount() {
+  componentDidMount( ) {
 
-    axios.get(`http://localhost:8080`)
-    .then(res => {
-      this.setState({ projects: res.data });
+    axios.get( `http://localhost:8080/projects` ).then(res => {
+
+      var projects = res.data
+      this.setState({ projects: projects });
+
     });
   }
-  render() {
+  render( ) {
 
-    const listItems = this.state.projects.map((proj) =>
-      <div className="ProjectItem">{proj.name}</div>
-    );
+    const listItems = this.state.projects.map(( proj, index ) => <div key={index} className="ProjectItem">{proj.projectName}</div>);
+
+    console.log( listItems );
     return (
       <div className='ProjectContainer'>
         {listItems}

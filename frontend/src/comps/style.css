@@ -1,29 +1,64 @@
 .App {
-  background-color: green;
+  width: 65%;
+  margin: auto;
+}
+
+
+.Form1 {
+
+  display: flex;
+  margin: auto;
+  background-color: orange;
+  justify-content: space-around;
+  height: 100px;
+  align-items: center;
 }
 
 .ProjectContainer {
   display: flex;
   justify-content: space-around;
-
+  align-items: center;
+flex-wrap: wrap;
 }
 
 .ProjectItem {
   flex-basis: 25%;
-  padding: 30px;
+  padding: 10px;
+  margin-bottom: 15px;
+  background-color: green;
 }
 
 .nav {
+  background-color: purple;
   display: flex;
+  align-items: center;
+  /*align-content:flex-end;*/
+  justify-content: space-around;
+  height: 50px;
+  /*margin-bottom: 25px;*/
+  /*padding-bottom: 30px;*/
 }
 
 .active {
   font-weight: bold;
+
 }
 
+a:hover {
+  background-color: yellow;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}
 
 .nav li {
-  margin-right: 15px;
+  color: yellow;
+  /*margin-right: 15px;*/
+  flex-basis: 22%;
+  list-style-type: none;
+
 }
 .home {
   background-color: yellow;
