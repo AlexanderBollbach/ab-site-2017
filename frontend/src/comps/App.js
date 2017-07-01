@@ -11,15 +11,15 @@ import Form1 from './Form1'
 class App extends React.Component {
   render() {
     return (
-  <Router>
-    <div className="App">
-      <Nav />
-      <Route exact path='/' component={Home} />
-      <Route path='/projects' component={Projects} />
-      <Route path='/about' component={About} />
-      <Route path='/input' component={Form1} />
-    </div>
-  </Router>
+      <Router>
+        <div className="App">
+          <Nav />
+          <Route exact path='/' component={Home} />
+          <Route path='/projects' component={Projects} />
+          <Route path='/about' component={About} />
+          <Route path='/input' component={Form1} />
+        </div>
+      </Router>
     )
   }
 }

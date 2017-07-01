@@ -15,7 +15,7 @@ class Projects extends React.Component {
 
   componentDidMount( ) {
 
-    axios.get( `http://localhost:8080/projects` ).then(res => {
+    axios.get( `/projects` ).then(res => {
 
       var projects = res.data
       this.setState({ projects: projects });
