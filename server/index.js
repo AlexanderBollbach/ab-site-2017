@@ -15,7 +15,6 @@ var MongoClient = require('mongodb').MongoClient
 var bodyParser = require('body-parser');
 var db;
 
-// test
 
 app.use(function(req, res, next) {
     res.header("Access-Control-Allow-Origin", "*");
