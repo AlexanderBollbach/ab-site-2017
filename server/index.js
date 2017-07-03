@@ -33,7 +33,7 @@ MongoClient.connect(mongoURL, function (err, database) {
 	db = database;
 	console.log('Connected to MongoDB');
 	//Start app only after connection is ready
-	app.listen(80);
+	app.listen(3000);
    }});
 
 
